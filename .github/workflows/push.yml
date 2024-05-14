@@ -1,8 +1,9 @@
 name: icon-automation
 on:
+  workflow_dispatch:
   push:
     branches:
-    - master
+        - master
     # file paths to consider in the event. Optional; defaults to all.
     paths:
       - package.json

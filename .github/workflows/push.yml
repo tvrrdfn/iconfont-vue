@@ -12,7 +12,10 @@ jobs:
     name: figma icon automation
     runs-on: ubuntu-latest
     steps:
-    - run: echo "My secret is ${{ secrets }}"
+    - run: 
+        echo "My secret FIGMA_TOKEN is ${{ secrets.FIGMA_TOKEN }}"
+        echo "My secret GH_TOKEN is ${{ secrets.GH_TOKEN }}"
+        echo "My secret FIGMA_FILE_URL is ${{ secrets.FIGMA_FILE_URL }}"
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
